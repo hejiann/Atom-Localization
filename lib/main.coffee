@@ -21,7 +21,7 @@ module.exports =
     addMenu: () ->
         languages = require("../languages.json")
         for menu in atom.menu.template
-            if menu.label == "Packages"
+            if menu.label == "Packages" || menu.label == "&Packages"
                 submenu = {label: "Localization", submenu: []}
                 for lang in languages
                     l = lang["language"]
